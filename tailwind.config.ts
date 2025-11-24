@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['Sora', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "dark-bg": "hsl(var(--dark-bg))",
+        "neon-blue": "hsl(var(--neon-blue))",
+        "neon-cyan": "hsl(var(--neon-cyan))",
+        "purple-accent": "hsl(var(--purple-accent))",
       },
       borderRadius: {
         lg: "var(--radius)",
