@@ -1,83 +1,152 @@
-import { GraduationCap, Target, Zap } from "lucide-react";
+import { GraduationCap, Target, Zap, Code, Sparkles, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <p className="text-primary font-semibold mb-2 uppercase tracking-wide">Get to know me</p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+    <section id="about" className="py-32 bg-background relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-xl mb-4">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <p className="text-primary font-semibold text-sm uppercase tracking-wide">Get to know me</p>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">About Me</h2>
+          <div className="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full shadow-lg shadow-primary/50"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Image */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left - Enhanced Image */}
           <div className="relative animate-fade-in">
             <div className="relative aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-20"></div>
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm p-8 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-primary/10 border-2 border-primary/30 flex items-center justify-center">
-                    <GraduationCap className="w-24 h-24 text-primary" />
+              {/* Animated Glow */}
+              <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
+              
+              {/* Main Card with Glassmorphism */}
+              <div className="relative rounded-3xl overflow-hidden border-2 border-primary/30 bg-gradient-to-br from-card/70 to-card/50 backdrop-blur-2xl p-10 flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-500 group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+                
+                <div className="relative text-center space-y-6">
+                  {/* Enhanced Icon with Multiple Layers */}
+                  <div className="relative inline-block">
+                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl animate-pulse"></div>
+                    <div className="relative w-56 h-56 rounded-full bg-gradient-to-br from-primary/20 via-accent/20 to-purple-accent/20 border-4 border-primary/40 flex items-center justify-center shadow-2xl group-hover:rotate-6 transition-transform duration-500">
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse"></div>
+                      <GraduationCap className="w-28 h-28 text-primary relative z-10" />
+                    </div>
                   </div>
-                  <p className="text-muted-foreground">Your Photo Here</p>
+                  
+                  <div className="space-y-2">
+                    <p className="text-xl font-heading font-bold text-gradient">Your Photo Here</p>
+                    <p className="text-sm text-muted-foreground">Professional Portrait</p>
+                  </div>
                 </div>
               </div>
               
-              {/* Decorative Elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 border-2 border-neon-cyan/30 rounded-2xl -z-10"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-purple-accent/30 rounded-2xl -z-10"></div>
+              {/* Enhanced Decorative Elements */}
+              <div className="absolute -top-8 -right-8 w-40 h-40 border-2 border-neon-cyan/30 rounded-3xl -z-10 animate-float"></div>
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 border-2 border-purple-accent/30 rounded-3xl -z-10 animate-float" style={{ animationDelay: "1s" }}></div>
+              <div className="absolute top-1/2 -right-6 w-20 h-20 bg-neon-cyan/20 rounded-full blur-xl animate-pulse"></div>
+              <div className="absolute top-1/4 -left-6 w-24 h-24 bg-purple-accent/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
             </div>
           </div>
 
-          {/* Right - Content */}
-          <div className="space-y-6 animate-fade-in delay-200">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed text-foreground/90">
-                I graduated in B.Tech with Computer Science Engineering from ANA Group of Institutions in 2023. 
+          {/* Right - Enhanced Content */}
+          <div className="space-y-8 animate-fade-in delay-200">
+            <div className="space-y-6">
+              <p className="text-xl leading-relaxed text-foreground/90 font-medium">
+                I graduated in <span className="text-primary font-semibold">B.Tech with Computer Science Engineering</span> from ANA Group of Institutions in 2023. 
                 Currently seeking a beginner role to enhance and explore my technical knowledge gained during my academic journey.
               </p>
-              <p className="text-lg leading-relaxed text-foreground/90">
-                As a fresher, I have a strong foundation in modern web technologies including HTML, CSS, JavaScript, 
-                Python, Java, and MySQL. I've completed several personal projects to enhance my skills and stay 
+              <p className="text-lg leading-relaxed text-foreground/80">
+                As a fresher, I have a strong foundation in modern web technologies including <span className="text-accent font-semibold">HTML, CSS, JavaScript, 
+                Python, Java, and MySQL</span>. I've completed several personal projects to enhance my skills and stay 
                 updated with industry trends.
               </p>
-              <p className="text-lg leading-relaxed text-foreground/90">
+              <p className="text-lg leading-relaxed text-foreground/80">
                 Passionate about learning new technologies and possess the ability to handle work pressure while 
                 maintaining quality and efficiency in deliverables.
               </p>
             </div>
 
-            {/* Key Highlights */}
-            <div className="grid md:grid-cols-2 gap-4 pt-6">
-              <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/10 hover:border-primary/30 transition-colors group">
-                <Target className="w-10 h-10 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-semibold text-lg mb-2">Goal-Oriented</h3>
-                <p className="text-sm text-muted-foreground">Focused on delivering results and continuous improvement</p>
+            {/* Enhanced Key Highlights */}
+            <div className="grid md:grid-cols-2 gap-6 pt-4">
+              <Card className="group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative p-8 bg-card/40 backdrop-blur-xl border-2 border-primary/20 hover:border-primary/40 transition-all hover:scale-105 duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-2xl border border-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                      <Target className="w-8 h-8 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading font-bold text-xl mb-2 group-hover:text-gradient transition-colors">Goal-Oriented</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Focused on delivering results and continuous improvement</p>
+                    </div>
+                  </div>
+                </div>
               </Card>
 
-              <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/10 hover:border-primary/30 transition-colors group">
-                <Zap className="w-10 h-10 text-accent mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-heading font-semibold text-lg mb-2">Quick Learner</h3>
-                <p className="text-sm text-muted-foreground">Rapidly adapting to new technologies and methodologies</p>
+              <Card className="group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative p-8 bg-card/40 backdrop-blur-xl border-2 border-primary/20 hover:border-accent/40 transition-all hover:scale-105 duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-accent/10 rounded-2xl border border-accent/20 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                      <Zap className="w-8 h-8 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading font-bold text-xl mb-2 group-hover:text-gradient transition-colors">Quick Learner</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Rapidly adapting to new technologies and methodologies</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="group relative overflow-hidden md:col-span-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative p-8 bg-card/40 backdrop-blur-xl border-2 border-primary/20 hover:border-purple-accent/40 transition-all hover:scale-[1.02] duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-purple-accent/10 rounded-2xl border border-purple-accent/20 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                      <Code className="w-8 h-8 text-purple-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading font-bold text-xl mb-2 group-hover:text-gradient transition-colors">Technical Expertise</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Strong foundation in web development, databases, and programming with hands-on project experience</p>
+                    </div>
+                  </div>
+                </div>
               </Card>
             </div>
 
-            {/* Education */}
-            <div className="pt-6 border-t border-border/50">
-              <h3 className="font-heading font-semibold text-xl mb-4 flex items-center gap-2">
-                <GraduationCap className="w-6 h-6 text-primary" />
-                Education
-              </h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="font-semibold text-lg">Bachelor of Technology - Computer Science Engineering</p>
-                  <p className="text-primary">ANA Group of Institutions</p>
-                  <p className="text-sm text-muted-foreground">Graduated 2023</p>
+            {/* Enhanced Education */}
+            <Card className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity"></div>
+              <div className="relative p-8 bg-card/40 backdrop-blur-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="p-4 bg-gradient-primary rounded-2xl shadow-lg shadow-primary/20">
+                    <GraduationCap className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-heading font-bold text-2xl mb-4 flex items-center gap-2">
+                      Education
+                      <Trophy className="w-5 h-5 text-primary" />
+                    </h3>
+                    <div className="space-y-2">
+                      <p className="font-bold text-xl text-gradient">Bachelor of Technology</p>
+                      <p className="text-lg text-foreground/90">Computer Science Engineering</p>
+                      <p className="text-primary font-semibold">ANA Group of Institutions</p>
+                      <div className="flex items-center gap-2 pt-2">
+                        <div className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full">
+                          <p className="text-sm font-medium">Graduated 2023</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
