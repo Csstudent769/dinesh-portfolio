@@ -1,5 +1,6 @@
 import { GraduationCap, Target, Zap, Code, Sparkles, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import profilePhoto from "@/assets/dinesh-yadav.jpg";
 
 const About = () => {
   return (
@@ -29,21 +30,11 @@ const About = () => {
               <div className="relative rounded-3xl overflow-hidden border-2 border-primary/30 bg-gradient-to-br from-card/70 to-card/50 backdrop-blur-2xl p-10 flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-500 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
                 
-                <div className="relative text-center space-y-6">
-                  {/* Enhanced Icon with Multiple Layers */}
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl animate-pulse"></div>
-                    <div className="relative w-56 h-56 rounded-full bg-gradient-to-br from-primary/20 via-accent/20 to-purple-accent/20 border-4 border-primary/40 flex items-center justify-center shadow-2xl group-hover:rotate-6 transition-transform duration-500">
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse"></div>
-                      <GraduationCap className="w-28 h-28 text-primary relative z-10" />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <p className="text-xl font-heading font-bold text-gradient">Your Photo Here</p>
-                    <p className="text-sm text-muted-foreground">Professional Portrait</p>
-                  </div>
-                </div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Dinesh Yadav" 
+                  className="relative w-full h-full object-cover object-top rounded-2xl"
+                />
               </div>
               
               {/* Enhanced Decorative Elements */}

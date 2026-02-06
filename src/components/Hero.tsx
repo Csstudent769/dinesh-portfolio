@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Code2, Sparkles, Award, Target } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/dinesh-yadav.jpg";
 
 const Hero = () => {
   const floatingSkills = [
@@ -151,33 +152,12 @@ const Hero = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/40 backdrop-blur-2xl bg-gradient-to-br from-card/50 to-card/30 shadow-2xl hover:scale-105 transition-transform duration-500 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
                 
-                <div className="relative h-full flex items-center justify-center p-12">
-                  <div className="text-center space-y-6">
-                    {/* Enhanced Icon Container */}
-                    <div className="relative inline-block">
-                      <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl animate-pulse"></div>
-                      <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-primary via-accent to-purple-accent flex items-center justify-center shadow-2xl group-hover:rotate-12 transition-transform duration-500">
-                        <Code2 className="w-20 h-20 text-white animate-pulse" />
-                      </div>
-                    </div>
-                    
-                    {/* Text Content */}
-                    <div className="space-y-2">
-                      <p className="text-xl font-heading font-bold text-gradient">Your Photo</p>
-                      <p className="text-sm text-muted-foreground">Professional portrait</p>
-                    </div>
-
-                    {/* Decorative Elements */}
-                    <div className="flex justify-center gap-2">
-                      {[...Array(3)].map((_, i) => (
-                        <div 
-                          key={i}
-                          className="w-2 h-2 rounded-full bg-primary animate-pulse"
-                          style={{ animationDelay: `${i * 0.2}s` }}
-                        ></div>
-                      ))}
-                    </div>
-                  </div>
+                <div className="relative h-full flex items-center justify-center">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Dinesh Yadav" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
 
                 {/* Overlay Pattern */}
