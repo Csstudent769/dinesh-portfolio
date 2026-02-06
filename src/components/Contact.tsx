@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Send, Github, Linkedin, Youtube, Instagram, Facebook, Sparkles } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Youtube, Instagram, Facebook, Sparkles } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -82,16 +82,15 @@ const Contact = () => {
                 Follow Me
               </h4>
               <div className="flex flex-wrap gap-4">
-                {[
-                  { icon: Github, label: "GitHub", gradient: "from-primary to-neon-blue" },
-                  { icon: Linkedin, label: "LinkedIn", gradient: "from-neon-cyan to-accent" },
-                  { icon: Youtube, label: "YouTube", gradient: "from-purple-accent to-primary" },
-                  { icon: Instagram, label: "Instagram", gradient: "from-accent to-neon-cyan" },
-                  { icon: Facebook, label: "Facebook", gradient: "from-neon-blue to-primary" }
+              {[
+                  { icon: Linkedin, label: "LinkedIn", gradient: "from-neon-cyan to-accent", url: "https://www.linkedin.com/in/erdinesh01" },
+                  { icon: Youtube, label: "YouTube", gradient: "from-purple-accent to-primary", url: "https://www.youtube.com/dineshyadavoffficial" },
+                  { icon: Instagram, label: "Instagram", gradient: "from-accent to-neon-cyan", url: "https://www.instagram.com/official__dinesh01" },
+                  { icon: Facebook, label: "Facebook", gradient: "from-neon-blue to-primary", url: "https://www.facebook.com/share/1AVvMhR4bJ/" }
                 ].map((social, index) => {
                   const IconComponent = social.icon;
                   return (
-                    <div key={index} className="group/social relative">
+                    <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="group/social relative">
                       <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} rounded-2xl blur-lg opacity-0 group-hover/social:opacity-50 transition-opacity`}></div>
                       <Button
                         variant="outline"
@@ -100,7 +99,7 @@ const Contact = () => {
                       >
                         <IconComponent className="w-6 h-6" />
                       </Button>
-                    </div>
+                    </a>
                   );
                 })}
               </div>
