@@ -50,7 +50,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-lg mb-2">Email</h4>
-                      <p className="text-sm text-muted-foreground">your.email@example.com</p>
+                      <p className="text-sm text-muted-foreground">dy0630449@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-lg mb-2">Location</h4>
-                      <p className="text-sm text-muted-foreground">Based in India</p>
+                      <p className="text-sm text-muted-foreground">New Delhi, India</p>
                     </div>
                   </div>
                 </div>
